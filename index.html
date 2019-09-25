@@ -16,115 +16,92 @@
             <h1 class="heading display-5 pb-3">
                 Net Worth Calculator
             </h1>
-            <form action="" id="nw-form">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="assets">
                         <h5>Assets</h5>
                         <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control asset" placeholder="Real Estate">
-                            </div>
+                            <button class="btn btn-dark btn-block" data-toggle="modal" data-target="#assetModal">Add New Asset</button>
                         </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
+                        <!--Asset Modal -->
+                        <div class="modal fade" id="assetModal" tabindex="-1" role="dialog" aria-labelledby="assetModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="assetModalLabel">Add Asset and Value</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form id="add-asset-form">
+                                        <div class="modal-body">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" id="asset-name" placeholder="Asset Name" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">NGN</span>
+                                                        </div>
+                                                        <input type="number" class="form-control asset" id="asset-value" placeholder="Asset Value" required>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" id="add-asset" class="btn btn-primary">Add Asset</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <input type="text" class="form-control asset" placeholder="Checking Accounts">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control asset" placeholder="Savings Accounts">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control asset" placeholder="Retirement Accounts">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control asset" placeholder="Autos">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control asset" placeholder="Others">
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="liabilities">
                         <h5>Liabilities</h5>
                         <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
+                            <button class="btn btn-dark btn-block" data-toggle="modal" data-target="#liabilityModal">Add New Liability</button>
+                        </div>
+                        <!--Asset Modal -->
+                        <div class="modal fade" id="liabilityModal" tabindex="-1" role="dialog" aria-labelledby="liabilityModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="liabilityModalLabel">Add Liability and Value</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form id="add-liability-form">
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="liability-name" placeholder="Liability Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">NGN</span>
+                                                </div>
+                                                <input type="number" class="form-control asset" id="liability-value" placeholder="Liability Value" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" id="add-liability" class="btn btn-primary">Add Liability</button>
+                                    </div>
+                                    </form>
                                 </div>
-                                <input type="text" class="form-control liabilities" placeholder="Mortgages">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control liabilities" placeholder="Consumer Debts">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control liabilities" placeholder="Personal Loans">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control liabilities" placeholder="Student Loans">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control liabilities" placeholder="Auto Loans">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">NGN</span>
-                                </div>
-                                <input type="text" class="form-control liabilities" placeholder="Other Debts">
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                    <button id="calculate-button" class="btn btn-dark btn-block">Calculate</button>
                 </div>
-            </form>
             <!-- Loader -->
             <!-- Results -->
             <div id="results" class="pt-2">
