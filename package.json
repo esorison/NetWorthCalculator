@@ -1,7 +1,8 @@
 {
   "name": "NetWorthCalculator",
-  "version": "1.0.0",
-  "dependencies": {
-    
+  "description": "a very cool app",
+  "version": "0.0.1",
+  "engines": {
+    "npm": "6.x"
   }
 }
